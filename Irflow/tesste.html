@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>IR.Flow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="dimensao">
+
+    <!-- Barra lateral -->
+    <div class="barra">
+
+        <a href="index.html" class="icone">🏠︎</a>
+
+        <a href="https://orteil.dashnet.org/cookieclicker/" class="icone">🗁</a>
+
+        <a href="pasta_privada.html" class="icone">🗀</a>
+
+        <a   class="icone" onclick="abrirModal()">🖳</a>
+         https://servicos.receitafederal.gov.br/lista-grupo?categoria=8
+        <a href="#" class="icone">⏻</a>
+
+        <a href="tesste.html" class="botao-extra">Testes</a>
+
+    </div>
+<!------------------------------------NÃO MUDAR-------------------------------------- -->
+
+<h1>TESTE</h1>
+
+ <div id="meuModal" class="modal-overlay">
+      <div class="modal-box">
+        <h2>Atenção!</h2>
+        <p>Você será redirecionando para outra pagina</p>
+        <p>Deseja prosseguir?</p>
+          <button><a href="https://servicos.receitafederal.gov.br/lista-grupo?categoria=8">Sim</a></button>
+          <button onclick="fecharModal()">Não</button>
+      </div>
+  </div>
+
+
+<script>
+  function abrirModal() {
+    document.getElementById('meuModal').style.display = 'flex';
+  }
+  function fecharModal() {
+    document.getElementById('meuModal').style.display = 'none';
+  }
+</script>
+
+</body>
+</html>
