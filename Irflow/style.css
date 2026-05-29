@@ -14,67 +14,73 @@ a {
 /* FUNDO DO SITE */
 body {
     background: #2b2f42;
-
     font-family: Arial, sans-serif;
-
     width: 100%;
     height: 100vh;
-
     overflow: hidden;
 }
 
 .titulo {
     color: white;
     text-align: center;
-     line-height: 2; 
+    line-height: 2;
     font-size: 24px;
 }
 
 /* DIMENSÃO DO SITE */
 .dimensao {
     background: #2f3448;
-
     display: flex;
-
     width: 100vw;
     height: 100vh;
-
     overflow: hidden;
 }
 
 /* BARRA LATERAL */
 .barra {
     width: 80px;
-
     background: #252a3d;
-
     display: flex;
     flex-direction: column;
     align-items: center;
-
     padding: 15px 0;
-
     gap: 20px;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+/* INPUTS GERAIS */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    background: transparent;
+
+    border: none;
+    border-bottom: 2px solid white;
+
+    padding: 8px;
+
+    color: white;
+
+    outline: none;
 }
 
 /* ÍCONES */
 .icone {
     width: 60px;
     height: 60px;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     font-size: 28px;
-
     border: none;
     background: transparent;
-
     color: white;
-
     cursor: pointer;
-
     transition: 0.3s;
 }
 
@@ -85,14 +91,10 @@ body {
 /* CONTEÚDO PRINCIPAL */
 .main {
     flex: 1;
-
     padding: 20px;
-
     color: white;
-
     display: flex;
     flex-direction: column;
-
     overflow-y: auto;
 }
 
@@ -101,9 +103,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     gap: 15px;
-
     margin-top: 10px;
 }
 
@@ -114,9 +114,7 @@ body {
 /* PESQUISA */
 .pesquisa {
     width: 220px;
-
     padding: 10px;
-
     border-radius: 8px;
     border: none;
 }
@@ -124,34 +122,35 @@ body {
 /* GRID */
 .grid {
     margin-top: 20px;
-
     display: grid;
-
     grid-template-columns: repeat(3, 1fr) 250px;
-
     gap: 15px;
-
     flex: 1;
 }
 
 /* CARDS */
 .card {
     background: #3a3f55;
-
     border-radius: 12px;
-
     padding: 15px;
-
     min-height: 175px;
+}
+
+.card.login {
+    width: 320px;
+    background: #313552;
+    border-radius: 15px;
+    padding: 30px;
+    position: relative;
+    text-align: center;
+    color: white;
 }
 
 .card.center {
     display: flex;
     justify-content: center;
     align-items: center;
-
     font-size: 20px;
-
     opacity: 0.7;
 }
 
@@ -177,9 +176,7 @@ body {
 .side-panel {
     display: flex;
     flex-direction: column;
-
     gap: 15px;
-
     grid-column: 4;
     grid-row: span 3;
 }
@@ -187,76 +184,54 @@ body {
 /* BOTÃO */
 .button {
     background: #9c9fad;
-
     padding: 10px;
-
     border-radius: 8px;
-
     text-align: center;
-
     cursor: pointer;
 }
 
-.botao{
+.botao {
     background: #42475a;
-
     padding: 10px;
-
     border-radius: 8px;
-
     text-align: center;
     color: white;
-
     cursor: pointer;
 }
 
 /* TEXTO PEQUENO */
 .small {
     font-size: 12px;
-
     margin-top: 5px;
 }
 
-.texto.grande{
+.texto.grande {
     font-size: 16px;
-
     margin-top: 10px;
 }
 
 /* MODAL */
 .modal-overlay {
     position: fixed;
-
     top: 0;
     left: 0;
-
     width: 100%;
     height: 100%;
-
     background: rgba(0, 0, 0, 0.5);
-
     display: none;
-
     justify-content: center;
     align-items: center;
-
     z-index: 1000;
 }
 
 /* BOX MODAL */
 .modal-box {
     background: #3a3f55;
-
     padding: 20px;
-
     border-radius: 10px;
-
     border: 2px solid #555c7a;
-
     color: white;
-
     text-align: center;
-
     min-width: 300px;
 }
 
@@ -266,7 +241,6 @@ h2 {
 
 p {
     margin-bottom: 6px;
-
     text-align: left;
 }
 
@@ -274,7 +248,6 @@ p {
 form {
     display: flex;
     flex-direction: column;
-
     gap: 10px;
 }
 
@@ -282,14 +255,10 @@ form {
 input[type="text"],
 input[type="password"] {
     background: transparent;
-
     border: none;
     border-bottom: 2px solid white;
-
     padding: 8px;
-
     color: white;
-
     outline: none;
 }
 
@@ -297,31 +266,21 @@ input[type="password"] {
 .checkbox {
     display: flex;
     align-items: center;
-
     gap: 5px;
-
     font-size: 12px;
-
     color: #cfcfcf;
 }
 
 /* BOTÕES */
 button {
     margin-top: 10px;
-
     padding: 10px;
-
     border: none;
     border-radius: 8px;
-
     background: #3a3f55;
-
     color: white;
-
     font-weight: bold;
-
     cursor: pointer;
-
     transition: 0.3s;
 }
 
@@ -363,9 +322,7 @@ button:hover {
 
     .barra {
         width: 100%;
-
         flex-direction: row;
-
         justify-content: center;
     }
 }
