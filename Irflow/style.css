@@ -53,21 +53,7 @@ body {
     margin-bottom: 10px;
 }
 
-/* INPUTS GERAIS */
-input[type="text"],
-input[type="password"],
-input[type="email"] {
-    background: transparent;
 
-    border: none;
-    border-bottom: 2px solid white;
-
-    padding: 8px;
-
-    color: white;
-
-    outline: none;
-}
 
 /* ÍCONES */
 .icone {
@@ -128,6 +114,11 @@ input[type="email"] {
     flex: 1;
 }
 
+.caixa {
+    width: 300px;
+    margin: 0 auto; 
+}
+
 /* CARDS */
 .card {
     background: #3a3f55;
@@ -136,14 +127,16 @@ input[type="email"] {
     min-height: 175px;
 }
 
-.card.login {
-    width: 320px;
-    background: #313552;
-    border-radius: 15px;
-    padding: 30px;
-    position: relative;
-    text-align: center;
+.card.cadastro {    
+    background: #3a3f55;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #555c7a;
     color: white;
+    font-size: 12px;
+    margin-top: 15px;
+    text-align: center;
+    min-width: 300px;
 }
 
 .card.center {
@@ -191,10 +184,11 @@ input[type="email"] {
 }
 
 .botao {
-    background: #42475a;
+    background: #b1b9d8;
     padding: 10px;
     border-radius: 8px;
     text-align: center;
+    font-size: 16px;
     color: white;
     cursor: pointer;
 }
@@ -203,6 +197,12 @@ input[type="email"] {
 .small {
     font-size: 12px;
     margin-top: 5px;
+}
+
+.texto.pequeno {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 15px;
 }
 
 .texto.grande {
@@ -221,10 +221,10 @@ input[type="email"] {
     display: none;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 1000;          
 }
 
-/* BOX MODAL */
+/* Caixa MODAL */
 .modal-box {
     background: #3a3f55;
     padding: 20px;
@@ -270,14 +270,14 @@ input[type="password"] {
     font-size: 12px;
     color: #cfcfcf;
 }
-
+    
 /* BOTÕES */
 button {
     margin-top: 10px;
     padding: 10px;
     border: none;
     border-radius: 8px;
-    background: #3a3f55;
+    background: #9298b3;
     color: white;
     font-weight: bold;
     cursor: pointer;
