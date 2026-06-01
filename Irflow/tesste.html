@@ -17,19 +17,17 @@
             <!-- Modal Login -->
             <button class="icone" onclick="abrirModal1()">👤</button>
 
-            <a href="index.html" class="icone">🏠︎</a>
+            <button class="icone" onclick="abrirModal1()">🏠︎</button>
 
             <!-- Modal Aviso -->
-            <button class="icone" onclick="abrirModal2()">🗁</button>
+            <button class="icone" onclick="abrirModal1()">🗁</button>
 
-            <a href="pasta_privada.html" class="icone">🗀</a>
+            <button class="icone" onclick="abrirModal1()">🗀</button>
 
             <!-- Outro botão -->
             <button class="icone" onclick="abrirModal2()">🖳</button>
 
-            <button class="icone">⏻</button>
-
-            <a href="tesste.html" class="botao-extra">Testes</a>
+            <button class="icone" onclick="abrirModal1()">!</button>
 
         </div>
 
@@ -38,15 +36,18 @@
         <div id="modal1" class="modal-overlay">
 
             <div class="modal-box">
+                 <div>
+                    <img src="img/logo.png" class="logo">
+                </div>
 
                 <h2>Login</h2>
 
                 <form>
 
-                    <p>Insira seu e-mail</p>
+                    <p class="texto pequeno">Insira seu e-mail</p>
                     <input type="text" placeholder="Digite seu email">
 
-                    <p>Digite sua senha</p>
+                    <p class="texto pequeno">Digitar sua senha</p>
                     <input type="password" placeholder="Digite sua senha">
 
                     <br><br>
@@ -67,8 +68,8 @@
                 <br><br>
 
                 <div class="links">
-                    <a href="#">Esqueci a senha</a><br>
-                    <a href="#">Cadastre-se</a>
+                    <a onclick="abrirModal3()">Esqueci a senha</a><br>
+                    <a href="conta.html">Cadastre-se</a>
                 </div>
 
                 <br>
@@ -100,7 +101,46 @@
             </div>
 
         </div>
+       <!------------------------------------ MODAL 3 -------------------------------------- -->
 
+       <div id="modal3" class="modal-overlay">
+
+            <div class="modal-box">
+                 <div>
+                    <img src="img/logo.png" class="logo">
+                </div>
+
+                <h2>Esqueci a senha</h2>
+
+                <form>
+
+                    <p class="texto pequeno">Insira seu e-mail</p>
+                    <input type="text" placeholder="Digite seu email">
+
+                    <p class="texto pequeno">Insira o codigo de verificação</p>
+                    <input type="password" placeholder="Digite o codigo">
+
+                    <p class="texto pequeno">Digite sua nova senha</p>
+                    <input type="password" placeholder="Digite sua nova senha">
+                    <br><br>
+
+                    <br>
+
+                    <button type="button" onclick="window.location.href='index.html'">
+                        Entrar
+                    </button>
+
+                </form>
+
+                <br><br>
+
+                <button onclick="fecharModal3()">Cancelar</button>
+
+            </div>
+
+        </div>
+
+    
         <!-- Conteúdo principal -->
         <div class="main">
 
@@ -157,6 +197,7 @@
 
         const modal1 = document.getElementById('modal1');
         const modal2 = document.getElementById('modal2');
+        const modal3 = document.getElementById('modal3');
 
         function abrirModal1() {
             modal1.style.display = 'flex';
@@ -172,6 +213,14 @@
 
         function fecharModal2() {
             modal2.style.display = 'none';
+        }
+
+        function abrirModal3() {
+            modal3.style.display = 'flex';
+        }
+
+        function fecharModal3() {
+            modal3.style.display = 'none';
         }
 
     </script>
