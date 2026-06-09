@@ -1,0 +1,349 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: normal;
+}
+
+/* FUNDO DO SITE */
+body {
+    background: #2b2f42;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.titulo {
+    color: white;
+    text-align: center;
+    line-height: 2;
+    font-size: 24px;
+}
+
+/* DIMENSÃO DO SITE */
+.dimensao {
+    background: #2f3448;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* BARRA LATERAL */
+.barra {
+    width: 80px;
+    background: #252a3d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+    gap: 20px;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+
+
+/* ÍCONES */
+.icone {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    border: none;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.icone:hover {
+    transform: scale(1.1);
+}
+
+/* CONTEÚDO PRINCIPAL */
+.main {
+    flex: 1;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+/* TOPO */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.header h1 {
+    font-size: 28px;
+}
+
+/* PESQUISA */
+.pesquisa {
+    width: 220px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+}
+
+/* GRID */
+.grid {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 250px;
+    gap: 15px;
+    flex: 1;
+}
+
+.caixa {
+    width: 300px;
+    margin: 0 auto; 
+}
+
+/* CARDS */
+.card {
+    background: #3a3f55;
+    border-radius: 12px;
+    padding: 15px;
+    min-height: 175px;
+}
+
+.card.cadastro {    
+    background: #3a3f55;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #555c7a;
+    color: white;
+    font-size: 12px;
+    margin-top: 15px;
+    text-align: center;
+    min-width: 300px;
+}
+
+.card.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    opacity: 0.7;
+}
+
+.card.wide {
+    grid-column: span 3;
+}
+
+.card.avisos {
+    grid-column: 4;
+    grid-row: 4;
+    min-height: 275px;
+    gap: 5px;
+}
+
+.card.big {
+    display: flex;
+    flex-direction: column;
+
+    grid-column: span 3;
+    min-height: 650px;
+}
+
+/* PAINEL LATERAL */
+.side-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    grid-column: 4;
+    grid-row: span 3;
+}
+
+/* BOTÃO */
+.button {
+    background: #9c9fad;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.botao {
+    background: #b1b9d8;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}
+
+/* TEXTO PEQUENO */
+.small {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.texto.pequeno {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.texto.grande {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* MODAL */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;          
+}
+
+/* Caixa MODAL */
+.modal-box {
+    background: #3a3f55;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #555c7a;
+    color: white;
+    text-align: center;
+    min-width: 300px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 6px;
+    text-align: left;
+}
+
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* INPUTS */
+input[type="text"],
+input[type="password"] {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+    padding: 8px;
+    color: white;
+    outline: none;
+}
+
+/* CHECKBOX */
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    color: #cfcfcf;
+}
+.centro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 540px;
+}    
+
+/* BOTÕES */
+button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #9298b3;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* BOTÃO EXPORTAR */
+.button_export {
+    padding: 15px 40px;
+    align-items: center;
+    border: none;
+    border-radius: 8px;
+    background: #9298b3;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #4a506b;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1000px) {
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .side-panel {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .card.wide {
+        grid-column: span 1;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .pesquisa {
+        width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .dimensao {
+        flex-direction: column;
+    }
+
+    .barra {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
