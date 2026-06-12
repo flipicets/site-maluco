@@ -1,214 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Upload de Arquivos</title>
-
-<style>
-
-/*fundo do site*/
-body {
-    background: #2b2f42;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Dimensão do site  */
-.dimensao {
-    background: #2f3448;
-    display: flex;
-    width: 1450px; 
-    height: 95vh; 
-    border-radius: 16px;
-    overflow: hidden;
-}
-
-/*barra lateral */
-.barra {
-    width: 80px;
-    background: #252a3d;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px 0;
-    gap: 20px;
-}
-
-.barra div {
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-    font-size: 40px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-a:link, a:visited {
-    color: white;
-    text-decoration: none;
-}
-
-/* Fundo escuro */
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-    display: none;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Caixa de aviso */
-.modal-box {
-    background: white;
-    padding: 20px;
-    border-radius: 5px;
-    text-align: center;
-}
-
-/* conteudo principal */
-.main {
-    flex: 1;
-    padding: 20px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-}
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.header h1 {
-    font-size: 28px;
-    margin: 0;
-}
-
-.pesquisa {
-    width: 200px;
-    padding: 8px;
-    border-radius: 8px;
-    border: none;
-}
-
-/* Grade */
-.grid {
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 250px;
-    gap: 15px;
-    flex: 1;
-}
-
-.card {
-    background: #3a3f55;
-    border-radius: 12px;
-    padding: 15px;
-    min-height: 175px;
-    box-sizing: border-box;
-}
-
-.card.center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 40px;
-    opacity: 0.7;
-}
-
-.card.wide {
-    grid-column: span 3;
-}
-
-/* Grade grande */
-.side-panel {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    grid-column: 4;
-    grid-row: span 3;
-}
-
-/* Botão */
-.button {
-    background: #2b2f42;
-    padding: 10px;
-    border-radius: 8px;
-    text-align: center;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.button:hover {
-    background: #404760;
-}
-
-/* Fonte do texto */
-.small {
-    font-size: 12px;
-    opacity: 0.8;
-    margin-top: 5px;
-}
-
-/* Upload */
-.upload-area {
-    border: 2px dashed #7f8bb3;
-    border-radius: 12px;
-    height: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 15px;
-    transition: 0.2s;
-}
-
-.upload-area:hover {
-    background: rgba(255,255,255,0.03);
-}
-
-.upload-area input {
-    display: none;
-}
-
-.upload-label {
-    background: #5865f2;
-    padding: 12px 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.upload-label:hover {
-    background: #6c78ff;
-}
-
-.file-list {
-    margin-top: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.file-item {
-    background: #2b2f42;
-    padding: 10px;
-    border-radius: 8px;
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload de Arquivos</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -216,18 +12,46 @@ a:link, a:visited {
 
     <!-- Barra lateral -->
     <div class="barra">
-        <div>🏠</div>
-        <div>📁</div>
-        <div>⬆️</div>
-        <div>⚙️</div>
-    </div>
+            <a href="user.html" class="icone">
+                <img src="img/user.png" class="logo">   
+            </a>
+
+            <a href="index.html" class="icone">🏠︎</a>
+
+            <!-- Modal Aviso -->
+            <button class="icone">🗁</button>
+
+            <a href="pasta_privada.html" class="icone">🗀</a>
+            <!--
+            Botão da Receita Federal
+            - href: endereço do site
+            - target="_blank": abre em nova aba
+            - onclick: pede confirmação antes do redirecionamento
+            -->
+
+            <a href="https://servicos.receitafederal.gov.br/lista-grupo?categoria=8"
+            target="_blank" class="icone" 
+
+            onclick="return confirm('Você será redirecionado para o portal da Receita Federal. Deseja continuar?')">
+            🖳
+            </a>
+
+            <a href="prioridades.html" class="icone">!</a>
+
+     </div>
 
     <!-- Conteúdo principal -->
     <div class="main">
 
         <div class="header">
             <h1>Gerenciador de Arquivos</h1>
-            <input type="text" class="pesquisa" placeholder="Pesquisar arquivos...">
+            <div class="top-info">
+                <div class="status">
+                    Online
+                </div>
+
+                <input class="pesquisa" placeholder="Pesquisa">
+            </div>
         </div>
 
         <div class="grid">
@@ -264,18 +88,26 @@ a:link, a:visited {
                 <h3>Imagens</h3>
                 <p class="small">PNG, JPG e GIF</p>
             </div>
+            
+            <div class="card">
+                    <h3>Resumo</h3>
+                    <br>
+                    <p>Total de arquivos:</p>
+                    <strong>26 arquivos</strong>
 
-            <div class="card center">
-                +
+                    <br><br>
+
+                    <p>Espaço utilizado:</p>
+                    <strong>4.7 GB</strong>
+            </div>
+
+            <div class="card">
+                <h3>Armazenamento</h3>
+                <p>2.4 GB usados</p>
             </div>
 
             <!-- Painel lateral -->
             <div class="side-panel">
-
-                <div class="card">
-                    <h3>Armazenamento</h3>
-                    <p>2.4 GB usados</p>
-                </div>
 
                 <div class="card">
                     <h3>Ações</h3>
