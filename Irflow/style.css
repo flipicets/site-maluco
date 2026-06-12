@@ -436,6 +436,52 @@ button:hover {
     font-size: 12px;
 }
 
+/* Upload */
+.upload-area {
+    border: 2px dashed #7f8bb3;
+    border-radius: 12px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    transition: 0.2s;
+}
+
+.upload-area:hover {
+    background: rgba(255,255,255,0.03);
+}
+
+.upload-area input {
+    display: none;
+}
+
+.upload-label {
+    background: #5865f2;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.upload-label:hover {
+    background: #6c78ff;
+}
+
+.file-list {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.file-item {
+    background: #2b2f42;
+    padding: 10px;
+    border-radius: 8px;
+}
+
 /* RESPONSIVIDADE */
 @media (max-width: 1000px) {
 
