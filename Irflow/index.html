@@ -13,72 +13,47 @@
 
         <!-- Barra lateral -->
         <div class="barra">
+            <a href="user.html" class="icone">
+                <img src="img/user.png" class="logo">   
+            </a>
 
             <a href="index.html" class="icone">🏠︎</a>
 
-            <!-- Modal Aviso -->
-            <button class="icone">🗁</button>
+            <a href="acessar_arquivos.html" class="icone">🗁</a>
 
             <a href="pasta_privada.html" class="icone">🗀</a>
+            <!--
+            Botão da Receita Federal
+            - href: endereço do site
+            - target="_blank": abre em nova aba
+            - onclick: pede confirmação antes do redirecionamento
+            -->
 
-            <!-- Outro botão -->
-            <button class="icone" onclick="abrirModal2()">🖳</button>
-<!---------------------------------------------------------------------------->
+            <a href="https://servicos.receitafederal.gov.br/lista-grupo?categoria=8"
+            target="_blank" class="icone" 
 
-<!--
-Botão da Receita Federal
-- href: endereço do site
-- target="_blank": abre em nova aba
-- onclick: pede confirmação antes do redirecionamento
--->
+            onclick="return confirm('Você será redirecionado para o portal da Receita Federal. Deseja continuar?')">
+            🖳
+            </a>
 
-        <a href="https://servicos.receitafederal.gov.br/lista-grupo?categoria=8"
-        target="_blank"
+            <a href="prioridades.html" class="icone">!</a>
 
-        onclick="return confirm('Você será redirecionado para o portal da Receita Federal. Deseja continuar?')">
-        🖳
-
-<!---------------------------------------------------------------------------->
-
-        </a>
-
-            <a href="prioridade.html" class="icone">!</a>
-
-            <a href="tesste.html" class="botao-extra">Testes</a>
+            <a href="tesste.html" class="botao-extra">Login</a>
 
         </div>
-        <!------------------------------------ MODAL 2 -------------------------------------- -->
 
-        <div id="modal2" class="modal-overlay">
-
-            <div class="modal-box">
-
-                <h2>Atenção!</h2>
-
-                <p>Você será redirecionado para outra página</p>
-                <p>Deseja prosseguir?</p>
-
-                <button
-                    onclick="window.location.href='https://servicos.receitafederal.gov.br/lista-grupo?categoria=8'">
-                    Sim
-                </button>
-
-                <button onclick="fecharModal2()">Não</button>
-
-            </div>
-    </div>
 <!------------------------------------NÃO MUDAR---------------------------------------->
     <!-- Conteúdo principal -->
     <div class="main">
 
-        </div>
+    
 
         <!-- Conteúdo principal -->
         <div class="main">
 
             <div class="header">
                 <h1>Irflow</h1>
-                <input class="pesquisa" placeholder="pesquisa">
+                <input class="pesquisa" placeholder="Pesquisa">
             </div>
 
         
@@ -186,8 +161,38 @@ Botão da Receita Federal
 
             </div>
         </div>
-            <div class="card center">+</div>
-            <div class="card center">+</div>
+            <div class="card center">
+                <div class="card fefoh">
+                    <h3>Resumo</h3>
+
+                    <p>Total de arquivos:</p>
+                    <strong>26 arquivos</strong>
+
+                    <br><br>
+
+                    <p>Espaço utilizado:</p>
+                    <strong>4.7 GB</strong>
+                </div>
+            </div>
+            <div class="card center">
+                 <div class="card fefoh">
+
+                    <h3>Recentes</h3>
+
+                    <div class="history-item">
+                        relatorio_final.pdf
+                    </div>
+
+                    <div class="history-item">
+                        backup_site.zip
+                    </div>
+
+                    <div class="history-item">
+                        imagem_projeto.png
+                    </div>              
+
+                </div>
+            </div>
 
             <div class="side-panel">
 
@@ -207,52 +212,65 @@ Botão da Receita Federal
                 <div class="card">
                     Nº de arquivos
                     <h2 id="numeroArquivos">0</h2>
+                </div>
+
+            </div>
+
+            <div class="card wide">
+
+                <strong>Prioridade de documentação</strong>
+
                 <div class="small">
                     • CPF<br>
                     • Título de eleitor<br>
                     • Comprovante de endereço<br>
                     • Dados bancários
-
-
-
-
-
                 </div>
 
             </div>
 
                 <div class="card wide">
-
-                    <strong>Prioridade de documentação</strong>
-
-                    <div class="small">
-                        • CPF<br>
-                        • Título de eleitor<br>
-                        • Comprovante de endereço<br>
-                        • Dados bancários
+                    <strong>Total de arquivos anexados</strong>
+                    <div class="file-icon">
+                        <a href="acessar_arquivos.html">📦</a>
                     </div>
 
-                </div>
-
-                <div class="card wide">
-                    Total de arquivos anexados
-                </div>
-
-                <div class="card avisos" id="avisos">
-                    Avisos
+                    <div class="file-title">
+                        <a href="acessar_arquivos.html">backup_site.zip</a>
+                    </div>
                 </div>
 
             </div>
+                        <!-- Adicionado id="barra-cookie" -->
+            <div class="cookie-banner" id="barra-cookie">
+                <div class="cookie-conteudo">
+                    <a class="cookie-link" href="https://cookie-clicker2.com/" target="_blank">
+                    <img src="img/cookie-icon.png" alt="Cookie" class="cookie-img">
+                    </a>
+                    <p class="cookie-texto">
+                        Este site utiliza cookies e tecnologias semelhantes para melhorar a experiência de navegação dos usuários, 
+                        garantir o funcionamento adequado<br> da plataforma e armazenar informações necessárias para a prestação dos serviços 
+                        oferecidos.
+                    </p>
+                </div>
+                
+            <!-- Adicionado os comandos onclick -->
+
+                <div class="cookie-botoes">
+                    <button class="btn-cookie aceitar" onclick="decidirCookies('aceitou')">Aceitar cookies</button>
+                    <button class="btn-cookie recusar" onclick="decidirCookies('recusou')">Recusar cookies</button>
+                </div>
+            </div>
+
 
         </div>
-
+    </div>
     </div>
   
     <script>
         /* Java conteudo dos modais */
 
         const modal1 = document.getElementById('modal1');
-        const modal2 = document.getElementById('modal2');
 
         function abrirModal1() {
             modal1.style.display = 'flex';
@@ -262,13 +280,21 @@ Botão da Receita Federal
             modal1.style.display = 'none';
         }
 
-        function abrirModal2() {
-            modal2.style.display = 'flex';
+                function decidirCookies(resposta) {
+        // 1. Salva a decisão no navegador para não incomodar o usuário novamente
+        localStorage.setItem('cookie_preferencia', resposta);
+
+        // 2. Faz a barra sumir da tela imediatamente
+        document.getElementById('barra-cookie').style.display = 'none';
         }
 
-        function fecharModal2() {
-            modal2.style.display = 'none';
-        }
+        // Quando a página carrega, verifica se o usuário já escolheu antes
+        window.onload = function() {
+            if (localStorage.getItem('cookie_preferencia')) {
+                // Se já existir uma resposta salva, a barra nem aparece
+                document.getElementById('barra-cookie').style.style.display = 'none';
+            }
+        };
 
     /* Fim dos modais */
 
