@@ -11,6 +11,10 @@ a {
     font-weight: normal;
 }
 
+a:link, a:visited {
+    color: white;
+}
+
 /* FUNDO DO SITE */
 body {
     background: #2b2f42;
@@ -53,6 +57,13 @@ body {
     margin-bottom: 10px;
 }
 
+.logo.centro {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    display: block;       /* Torna a imagem um bloco para aceitar margens automáticas */
+    margin-inline: auto;  /* Centraliza horizontalmente nas laterais esquerda e direita */
+}
 
 
 /* ÍCONES */
@@ -114,6 +125,14 @@ body {
     flex: 1;
 }
 
+.grid.fefoh {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 250px;
+    gap: 15px;
+    flex: 1;
+}
+
 .caixa {
     width: 300px;
     margin: 0 auto; 
@@ -125,6 +144,15 @@ body {
     border-radius: 12px;
     padding: 15px;
     min-height: 175px;
+}
+
+.card.fefoh {
+    background: #3a3f55;
+    border-radius: 12px;
+    padding: 15px;
+    min-height: 175px;
+    box-sizing: border-box;
+    
 }
 
 .card.cadastro {    
@@ -151,12 +179,6 @@ body {
     grid-column: span 3;
 }
 
-.card.avisos {
-    grid-column: 4;
-    grid-row: 4;
-    min-height: 275px;
-    gap: 5px;
-}
 
 .card.big {
     justify-content: flex-start;
@@ -165,7 +187,39 @@ body {
     min-height: 650px;
 }
 
-/* PAINEL LATERAL */
+/* Arquivos */
+.file-card {
+    background: #444b66;
+    border-radius: 12px;
+    padding: 15px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.file-card:hover {
+    transform: translateY(-3px);
+    background: #50597a;
+}
+
+.file-icon {
+    font-size: 42px;
+}
+
+.file-title {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Painel lateral */
+.side-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    grid-column: 4;
+    grid-row: span 3;
+}
+
 .side-panel {
     display: flex;
     flex-direction: column;
@@ -181,6 +235,7 @@ body {
     border-radius: 8px;
     text-align: center;
     cursor: pointer;
+    transition: 0.2s;
 }
 
 .botao {
@@ -195,7 +250,13 @@ body {
 
 /* TEXTO PEQUENO */
 .small {
+    font-size: 16px;
+    margin-top: 25px;
+}
+
+.small.fefoh {
     font-size: 12px;
+    opacity: 0.8;
     margin-top: 5px;
 }
 
@@ -270,7 +331,72 @@ input[type="password"] {
     font-size: 12px;
     color: #cfcfcf;
 }
-    
+
+/* Barra principal fixada no rodapé */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #92949c; /* Cor cinza do fundo */
+    display: flex;
+    justify-content: space-between; /* Separa o texto dos botões */
+    align-items: center;
+    padding: 15px 40px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    z-index: 9999; /* Garante que fique por cima de tudo */
+    border-top: 2px solid #5a5c64; /* Linha sutil no topo se necessário */
+}
+
+/* Alinhamento do ícone com o texto */
+.cookie-conteudo {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espaço entre a imagem e o texto */
+}
+
+/* Ícone do Cookie */
+.cookie-img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+/* Texto informativo */
+.cookie-texto {
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Bloco dos botões (empilhados) */
+.cookie-botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Espaço entre os dois botões */
+}
+
+/* Estilo geral dos botões */
+.btn-cookie {
+    background-color: #1d212b; /* Azul escuro idêntico ao da foto */
+    color: #ffffff;
+    border: 1px solid #3a3f4d;
+    padding: 6px 20px;
+    border-radius: 20px; /* Bordas arredondadas cápsula */
+    font-size: 13px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    text-align: center;
+    min-width: 130px;
+}
+
+/* Efeito ao passar o mouse por cima */
+.btn-cookie:hover {
+    background-color: #2a2f3d;
+}
+
 /* BOTÕES */
 button {
     margin-top: 10px;
@@ -286,6 +412,28 @@ button {
 
 button:hover {
     background: #4a506b;
+}
+
+/* Histórico */
+.history-item {
+    background: #2b2f42;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* Barra superior mock */
+.top-info {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.status {
+    background: #1f9d55;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 12px;
 }
 
 /* RESPONSIVIDADE */
