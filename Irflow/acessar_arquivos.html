@@ -1,195 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Acesso aos Arquivos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso aos Arquivos</title>
+    <link rel="stylesheet" href="style.css">
 
-<style>
-
-/*fundo do site*/
-body {
-    background: #2b2f42;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Dimensão do site  */
-.dimensao {
-    background: #2f3448;
-    display: flex;
-    width: 1450px; 
-    height: 95vh; 
-    border-radius: 16px;
-    overflow: hidden;
-}
-
-/*barra lateral */
-.barra {
-    width: 80px;
-    background: #252a3d;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px 0;
-    gap: 20px;
-}
-
-.barra div {
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-    font-size: 35px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-a:link, a:visited {
-    color: white;
-}
-
-/* conteudo principal */
-.main {
-    flex: 1;
-    padding: 20px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-}
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-}
-
-.header h1 {
-    font-size: 28px;
-    margin: 0;
-}
-
-.pesquisa {
-    width: 220px;
-    padding: 10px;
-    border-radius: 8px;
-    border: none;
-    outline: none;
-}
-
-/* Grade */
-.grid {
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 250px;
-    gap: 15px;
-    flex: 1;
-}
-
-.card {
-    background: #3a3f55;
-    border-radius: 12px;
-    padding: 15px;
-    min-height: 175px;
-    box-sizing: border-box;
-    
-}
-
-/* Arquivos */
-.file-card {
-    background: #444b66;
-    border-radius: 12px;
-    padding: 15px;
-    transition: 0.2s;
-    cursor: pointer;
-}
-
-.file-card:hover {
-    transform: translateY(-3px);
-    background: #50597a;
-}
-
-.file-icon {
-    font-size: 42px;
-}
-
-.file-title {
-    margin-top: 15px;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.small {
-    font-size: 12px;
-    opacity: 0.8;
-    margin-top: 5px;
-}
-
-/* Painel lateral */
-.side-panel {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    grid-column: 4;
-    grid-row: span 3;
-}
-
-/* Botão */
-.button {
-    background: #2b2f42;
-    padding: 12px;
-    border-radius: 8px;
-    text-align: center;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.button:hover {
-    background: #404760;
-}
-
-/* Histórico */
-.history-item {
-    background: #2b2f42;
-    padding: 10px;
-    border-radius: 8px;
-    margin-top: 10px;
-}
-
-/* Barra superior mock */
-.top-info {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
-.status {
-    background: #1f9d55;
-    padding: 6px 12px;
-    border-radius: 999px;
-    font-size: 12px;
-}
-
-</style>
 </head>
 <body>
 
 <div class="dimensao">
 
     <!-- Barra lateral -->
-    <div class="barra">
-        <div>🏠</div>
-        <div>📁</div>
-        <div>⭐</div>
-        <div>⚙️</div>
-    </div>
+     <div class="barra">
+            <a href="user.html" class="icone">
+                <img src="img/user.png" class="logo">   
+            </a>
+
+            <a href="index.html" class="icone">🏠︎</a>
+
+            <!-- Modal Aviso -->
+            <button class="icone">🗁</button>
+
+            <a href="pasta_privada.html" class="icone">🗀</a>
+            <!--
+            Botão da Receita Federal
+            - href: endereço do site
+            - target="_blank": abre em nova aba
+            - onclick: pede confirmação antes do redirecionamento
+            -->
+
+            <a href="https://servicos.receitafederal.gov.br/lista-grupo?categoria=8"
+            target="_blank" class="icone" 
+
+            onclick="return confirm('Você será redirecionado para o portal da Receita Federal. Deseja continuar?')">
+            🖳
+            </a>
+
+            <a href="prioridades.html" class="icone">!</a>
+
+            <a href="tesste.html" class="botao-extra">Login</a>
+
+     </div>
 
     <!-- Conteúdo principal -->
     <div class="main">
@@ -199,7 +51,7 @@ a:link, a:visited {
 
             <div>
                 <h1>Meus Arquivos</h1>
-                <p class="small">Acesso rápido aos arquivos enviados</p>
+                <p class="small fefoh">Acesso rápido aos arquivos enviados</p>
             </div>
 
             <div class="top-info">
@@ -207,13 +59,13 @@ a:link, a:visited {
                     Online
                 </div>
 
-                <input type="text" class="pesquisa" placeholder="Pesquisar arquivo...">
+                <input class="pesquisa" placeholder="Pesquisa">
             </div>
 
         </div>
 
         <!-- Grid -->
-        <div class="grid">
+        <div class="grid fefoh">
 
             <!-- Arquivo -->
             <div class="file-card">
@@ -223,7 +75,7 @@ a:link, a:visited {
                     relatorio_final.pdf
                 </div>
 
-                <div class="small">
+                <div class="small fefoh">
                     2.1 MB • PDF
                 </div>
             </div>
@@ -236,7 +88,7 @@ a:link, a:visited {
                     imagem_projeto.png
                 </div>
 
-                <div class="small">
+                <div class="small fefoh">
                     890 KB • PNG
                 </div>
             </div>
@@ -249,7 +101,7 @@ a:link, a:visited {
                     audio_teste.mp3
                 </div>
 
-                <div class="small">
+                <div class="small fefoh">
                     5.4 MB • MP3
                 </div>
             </div>
@@ -262,7 +114,7 @@ a:link, a:visited {
                     backup_site.zip
                 </div>
 
-                <div class="small">
+                <div class="small fefoh">
                     14 MB • ZIP
                 </div>
             </div>
@@ -275,7 +127,7 @@ a:link, a:visited {
                     video_demo.mp4
                 </div>
 
-                <div class="small">
+                <div class="small fefoh">
                     78 MB • MP4
                 </div>
             </div>
@@ -288,7 +140,7 @@ a:link, a:visited {
                     planilha.xlsx
                 </div>
 
-                <div class="small">
+                <div class="small fefoh">
                     430 KB • XLSX
                 </div>
             </div>
@@ -296,7 +148,7 @@ a:link, a:visited {
             <!-- Painel lateral -->
             <div class="side-panel">
 
-                <div class="card">
+                <div class="card fefoh">
                     <h3>Resumo</h3>
 
                     <p>Total de arquivos:</p>
@@ -308,12 +160,14 @@ a:link, a:visited {
                     <strong>4.7 GB</strong>
                 </div>
 
-                <div class="card">
+                <div class="card fefoh">
 
                     <h3>Ações</h3>
 
                     <div class="button">
-                        Adicionar Arquivo
+                        <a href="adicionar_arquivos.html" class="button-link">
+                            Adicionar Arquivo
+                        </a>
                     </div>
 
                     <br>
@@ -330,7 +184,7 @@ a:link, a:visited {
 
                 </div>
 
-                <div class="card">
+                <div class="card fefoh">
 
                     <h3>Recentes</h3>
 
@@ -344,9 +198,7 @@ a:link, a:visited {
 
                     <div class="history-item">
                         imagem_projeto.png
-                    </div>
-                    
-
+                    </div>              
 
                 </div>
 
