@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>IR.Flow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dimensao">
+
+        <!-- Barra lateral -->
+        <div class="barra">
+            <a href="user.html" class="icone">
+                <img src="img/user.png" class="logo">   
+            </a>
+
+            <a href="index.html" class="icone">🏠︎</a>
+
+            <a href="acessar_arquivos.html" class="icone">🗁</a>
+
+            <a href="pasta_privada.html" class="icone">🗀</a>
+            <!--
+            Botão da Receita Federal
+            - href: endereço do site
+            - target="_blank": abre em nova aba
+            - onclick: pede confirmação antes do redirecionamento
+            -->
+
+            <a href="https://servicos.receitafederal.gov.br/lista-grupo?categoria=8"
+            target="_blank" class="icone" 
+
+            onclick="return confirm('Você será redirecionado para o portal da Receita Federal. Deseja continuar?')">
+            🖳
+            </a>
+
+            <a href="prioridades.html" class="icone">!</a>
+
+        </div>
+
+<!------------------------------------NÃO MUDAR---------------------------------------->
+    <!-- Conteúdo principal -->
+        <div class="main">
+
+            <!-- Conteúdo principal -->
+            <div class="main">
+
+                <div class="card big">
+                    <div>
+                        <img src="img/user.png" class="logo centro">
+                    </div>
+                    <strong class="titulo">Informações Pessoais</strong>
+
+                        <div class="texto grande">
+                            Nome: XXXXXXX XXXXXXX XXXXX
+                        </div>
+                        <br>
+                        <div class="texto grande">
+                            CPF: XXX.XXX.XXX - XX
+                        </div>
+                        <br>
+                        <div class="texto grande">
+                            E-mail: XXXXXXXXXXXXX@XXX.com
+                        </div>
+                        <br>
+                        <div class="texto grande">
+                            Telefone: (XX) XXXXX - XXXX
+                        </div>
+                        <br>
+                        <div class="small fefoh">
+                            <a onclick="abrirModal3()">Trocar senha</a>
+                        </div>
+<!------------------------------------ MODAL 3 -------------------------------------- -->
+
+                        <div id="modal3" class="modal-overlay">
+
+                                <div class="modal-box">
+                                    <div>
+                                        <img src="img/logo.png" class="logo">
+                                    </div>
+
+                                    <h2>Esqueci a senha</h2>
+
+                                    <form>
+
+                                        <p class="texto pequeno">Insira seu e-mail</p>
+                                        <input type="text" placeholder="Digite seu email">
+
+                                        <p class="texto pequeno">Insira o codigo de verificação</p>
+                                        <input type="password" placeholder="Digite o codigo">
+
+                                        <p class="texto pequeno">Digite sua nova senha</p>
+                                        <input type="password" placeholder="Digite sua nova senha">
+                                        <br><br>
+
+                                        <br>
+
+                                        <button type="button" onclick="window.location.href='index.html'">
+                                            Entrar
+                                        </button>
+
+                                    </form>
+
+                                    <br><br>
+
+                                    <button onclick="fecharModal3()">Cancelar</button>
+
+                                </div>
+
+                        </div>
+                        
+
+                </div>  
+
+            </div>
+
+        </div>
+
+    </div>
+
+<!-- Java conteudo dos modais -->
+    <script>
+
+        const modal3 = document.getElementById('modal3');
+
+        function abrirModal3() {
+            modal3.style.display = 'flex';
+        }
+
+        function fecharModal3() {
+            modal3.style.display = 'none';
+        }
+
+
+    </script>
+
+</body>
+        
+        
